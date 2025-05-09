@@ -1,0 +1,37 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.Spotlight-V100
+.Trashes
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json # Optional: Some prefer to commit this for reproducible dev tool builds
+
+# IDE / Editor specific
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Packaged extension files
+*.zip
+*.crx
+
+# Build output directories
+dist/
+build/
+
+# Other temporary or sensitive files
+*.log
+*.tmp
+*.swp # Vim swap files

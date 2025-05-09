@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Autoscroll Settings</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      width: 300px;
+      padding: 15px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #007bff;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .setting {
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="range"] {
+      width: 100%;
+    }
+
+    .value-display {
+      font-weight: normal;
+      color: #555;
+      margin-left: 8px;
+    }
+
+    .mode-selector label {
+      display: inline-block;
+      margin-right: 10px;
+      font-weight: normal;
+    }
+
+    .mode-selector input[type="radio"] {
+      margin-right: 3px;
+      vertical-align: middle;
+    }
+
+    .info {
+      font-size: 12px;
+      color: #666;
+      margin-top: 20px;
+      border-top: 1px solid #eee;
+      padding-top: 10px;
+    }
+
+    ul {
+      padding-left: 18px;
+      margin-top: 5px;
+    }
+
+    li {
+      margin-bottom: 3px;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Autoscroll Settings</h2>
+
+  <div class="setting">
+    <label for="scrollMode">Scroll Mode:</label>
+    <div class="mode-selector">
+      <label><input type="radio" name="scrollMode" value="toggle" id="modeToggle"> Toggle</label>
+      <label><input type="radio" name="scrollMode" value="drag" id="modeDrag"> Click & Drag</label>
+    </div>
+  </div>
+
+  <div class="setting">
+    <label for="maxSpeed">Max Speed: <span id="maxSpeedValue" class="value-display"></span></label>
+    <input type="range" id="maxSpeed" name="maxSpeed" min="5" max="200" step="1">
+  </div>
+
+  <div class="setting">
+    <label for="sensitivity">Sensitivity: <span id="sensitivityValue" class="value-display"></span></label>
+    <input type="range" id="sensitivity" name="sensitivity" min="1" max="100" step="1">
+  </div>
+
+  <div class="info">
+    <strong>How to Use:</strong>
+    <ul>
+      <li>Middle-click to activate (based on selected mode).</li>
+      <li>Move mouse to scroll.</li>
+      <li>Stop with Left/Right click, Esc, or as per mode.</li>
+    </ul>
+    <p><em>Changes take effect on the next scroll activation.</em></p>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>
