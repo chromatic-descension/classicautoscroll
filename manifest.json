@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Windows-Style Autoscroll",
-  "version": "1.2",
-  "description": "True Windows-style middle-click autoscroll with configurable speed.",
+  "name": "Classic Autoscroll",
+  "version": "1.0",
+  "description": "Classic Windows-style middle-click autoscroll with configurable speed.",
   "permissions": [
     "activeTab",
     "scripting",

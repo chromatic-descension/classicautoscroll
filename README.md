@@ -1,4 +1,4 @@
-# Windows-Style Autoscroll for Chrome
+# Classic Autoscroll for Chrome
 
 ![Autoscroll Demo GIF](demo.gif)
 
