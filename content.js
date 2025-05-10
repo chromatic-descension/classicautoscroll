@@ -189,7 +189,31 @@ function preventContextMenu(e) {
 }
 
 document.addEventListener("mousedown", async (e) => {
-  if (e.button === 1) {
+  if (e.button === 1) { // Middle click
+    let targetElement = e.target;
+    let isLink = false;
+    while (targetElement && targetElement !== document.body && targetElement !== document.documentElement) {
+      if (targetElement.tagName === 'A' && targetElement.href) {
+        isLink = true;
+        break;
+      }
+      if (targetElement.isContentEditable) {
+        return;
+      }
+      targetElement = targetElement.parentElement;
+    }
+
+    if (isLink) {
+      return;
+    }
+
+    // Check if target is an input, textarea, or select, or contentEditable
+    const clickedTagName = e.target.tagName.toLowerCase();
+    if (['input', 'textarea', 'select'].includes(clickedTagName) || e.target.isContentEditable) {
+      return; // Don't start autoscroll, let default behavior occur
+    }
+
+
     e.preventDefault();
     e.stopPropagation();
 
