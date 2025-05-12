@@ -4,8 +4,6 @@
   "version": "1.0",
   "description": "Classic Windows-style middle-click autoscroll with configurable speed.",
   "permissions": [
-    "activeTab",
-    "scripting",
     "storage"
   ],
   "host_permissions": [
